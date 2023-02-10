@@ -43,7 +43,9 @@ class Network:
 
             for j in range(samples):
                 output = input_data[j]
+                
                 for layer in self.layers:
+                    
                     output = layer.forward_propagation(output)
                 
                 err += self.cost(output,output_data[j])
